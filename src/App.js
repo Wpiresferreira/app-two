@@ -35,8 +35,8 @@ function App() {
 
     <div className='flex flex-col bg-green-100 w-fit p-6 m-6 rounded-md border-solid border-4' >
     <h1 className='font-bold text-center text-lg p-2'>Students</h1>
-    {people.map((person) =>(
-      <StudentProfile name={person.name} url={person.url} age={person.age} department={person.department} hobby={person.hobby} />
+    {people.map((person, index) =>(
+      <StudentProfile key={index} name={person.name} url={person.url} age={person.age} department={person.department} hobby={person.hobby} />
      ))
   }
     </div>
